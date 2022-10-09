@@ -1,190 +1,94 @@
 <!doctype html>
-<html> 
- <head> 
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
- <style type="text/css" id="dcoder_stylesheet">body{background:#ffffff;margin:0;padding:0;font-family: sans-serif;}
+<html>
 
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#003F91">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-.but{
-  color:#ffffff;
-  width:30px;
-  padding:14px;
-  font-size:30px;
-  font-weight:600;
-  border-radius: 50px;
-  height:30px;
-  z-index:4;
-  }
-  
-  
-  .but{background: #34eba1;}
-  .input-cntr{border: 1.5px solid #34eba1;}
-  p{color: #34eba1;}
-  
-  .btn{background: lightgrey;}
-  .spc{background: grey;}
-  
-  
-  h6{position:absolute; bottom: -10.5%;font-size:15px;
-  color: #cccccc; left: 50%;
-  transform: translate(-50%, -50%);}
-  
-  .input-cntr{position:absolute; width:90%; height:100px; 
-  top:10%;left:50%; align-items:center;
-  justify-content:center;text-align:right;
-  transform:translate(-50%,-50%);border-radius:8px;}
-  
-  .input{width:100%; height:40px;margin-bottom:10px;}
-  
-  p{font-size:70px;font-weight:bold;
-  line-height:0;margin-right:20px;}
-  
-    
-  #center{z-index:0;position:absolute;width:100%;top:22%;}
-  
-  .row-last{margin-bottom:0px;}
-  
-  .row{display:flex;align-items:center;
-  justify-content:space-around;text-align:center;margin-bottom:28px;}</style></head> 
- <body id="body"> 
-  <div class="input-cntr"> 
-   <div class="input"> 
-    <p id="input"></p> 
-   </div> 
-  </div> 
-  <div id="center"> 
-   <div class="row"> 
-    <div class="but spc" id="switched" onclick="removeInput(1)">
-      C 
-    </div> 
-    <div class="but spc" id="cntr" onclick="addToInput('%')">
-      % 
-    </div> 
-    <div class="but spc" onclick="removeInput(0)">
-      &lt;&lt; 
-    </div> 
-    <div class="but spc" onclick="addToInput('÷')">
-      ÷ 
-    </div> 
-   </div> 
-   <div class="row"> 
-    <div class="but" id="switched" onclick="addToInput('1')">
-      1 
-    </div> 
-    <div class="but" id="cntr" onclick="addToInput('2')">
-      2 
-    </div> 
-    <div class="but" onclick="addToInput('3')">
-      3 
-    </div> 
-    <div class="but spc" onclick="addToInput('+')">
-      + 
-    </div> 
-   </div> 
-   <div class="row"> 
-    <div class="but" id="switched" onclick="addToInput('4')">
-      4 
-    </div> 
-    <div class="but" id="cntr" onclick="addToInput('5')">
-      5 
-    </div> 
-    <div class="but" onclick="addToInput('6')">
-      6 
-    </div> 
-    <div class="but spc" onclick="addToInput('-')">
-      - 
-    </div> 
-   </div> 
-   <div class="row"> 
-    <div class="but" id="switched" onclick="addToInput('7')">
-      7 
-    </div> 
-    <div class="but" id="cntr" onclick="addToInput('8')">
-      8 
-    </div> 
-    <div class="but" onclick="addToInput('9')">
-      9 
-    </div> 
-    <div class="but spc" onclick="addToInput('×')">
-      × 
-    </div> 
-   </div> 
-   <div class="row row-last"> 
-    <div class="but" id="switched" onclick="addToInput('00')">
-      00 
-    </div> 
-    <div class="but" id="cntr" onclick="addToInput('0')">
-      0 
-    </div> 
-    <div class="but" onclick="addToInput('.')">
-      . 
-    </div> 
-    <div class="but btn" onclick="addToInput('=')">
-      = 
-    </div> 
-   </div> 
-   <h6 onclick="colored()" id="dark">Dark Mode</h6> 
-  </div> 
- 
-<script type="text/javascript" id="dcoder_script">var a = document.getElementById('input');
-var d = document.getElementById("dark");
-var q = document.getElementsByClassName('but');
-var temp;
-var cn = 0;
+<body id="body">
+  <div class="input-cntr">
+    <div class="input">
+      <p id="input"></p>
+    </div>
+  </div>
+  <div id="center">
+    <div class="row">
+      <div class="but spc" id="switched" onclick="removeInput(1)">
+        C
+      </div>
+      <div class="but spc" id="cntr" onclick="addToInput('%')">
+        %
+      </div>
+      <div class="but spc" onclick="removeInput(0)">
+        &lt;&lt;
+      </div>
+      <div class="but spc" onclick="addToInput('÷')">
+        ÷
+      </div>
+    </div>
+    <div class="row">
+      <div class="but" id="switched" onclick="addToInput('1')">
+        1
+      </div>
+      <div class="but" id="cntr" onclick="addToInput('2')">
+        2
+      </div>
+      <div class="but" onclick="addToInput('3')">
+        3
+      </div>
+      <div class="but spc" onclick="addToInput('+')">
+        +
+      </div>
+    </div>
+    <div class="row">
+      <div class="but" id="switched" onclick="addToInput('4')">
+        4
+      </div>
+      <div class="but" id="cntr" onclick="addToInput('5')">
+        5
+      </div>
+      <div class="but" onclick="addToInput('6')">
+        6
+      </div>
+      <div class="but spc" onclick="addToInput('-')">
+        -
+      </div>
+    </div>
+    <div class="row">
+      <div class="but" id="switched" onclick="addToInput('7')">
+        7
+      </div>
+      <div class="but" id="cntr" onclick="addToInput('8')">
+        8
+      </div>
+      <div class="but" onclick="addToInput('9')">
+        9
+      </div>
+      <div class="but spc" onclick="addToInput('×')">
+        ×
+      </div>
+    </div>
+    <div class="row row-last">
+      <div class="but" id="switched" onclick="addToInput('00')">
+        00
+      </div>
+      <div class="but" id="cntr" onclick="addToInput('0')">
+        0
+      </div>
+      <div class="but" onclick="addToInput('.')">
+        .
+      </div>
+      <div class="but btn" onclick="addToInput('=')">
+        =
+      </div>
+    </div>
+    <h6 onclick="colored()" id="dark">Dark Mode</h6>
+  </div>
 
-function addToInput(x){
-  checkLength();
-  if(x == '='){
-    if(a.innerHTML.includes('×')){
-      temp = a.innerHTML.replace("×","*");
-      a.innerHTML = eval(temp);
-    }
-    else if(a.innerHTML.includes('÷')){
-      temp = a.innerHTML.replace("÷","/");
-      a.innerHTML = eval(temp);
-    }
-    else{a.innerHTML = eval(a.innerHTML);}
-  }
-  else if(a.innerHTML.length > 18){
-    //do Nothing
-  }
-  else{
-  a.innerHTML += x;
-  }
-}
+  <script type="text/javascript" src="main.js"></script>
+</body>
 
-function removeInput(i){
-  checkLength();
-  if(i == 1){a.innerHTML = '';}
-  else{a.innerHTML = a.innerHTML.slice(0,-1);}
-}
-
-function checkLength(){
-  if(a.innerHTML.length > 8 && a.innerHTML.length <= 12){
-    a.style.fontSize = "50px";
-  }
-  else if(a.innerHTML.length > 12){
-    a.style.fontSize = "30px";
-  }
-  else{a.style.fontSize = "70px";}
-}
-
-function colored(){
-  var bod = document.getElementById("body");
-  if(cn % 2 == 0){
-    bod.style.background = "#222222";
-    d.innerHTML = d.innerHTML.replace("Dark", "Light");
-    for (var n = 0; n < q.length; n++) {
-      q[n].style.color = "#222222"; 
-    }
-
-  }
-  else{
-    bod.style.background = "#ffffff";
-    d.innerHTML = d.innerHTML.replace("Light", "Dark");
-    for (var w = 0; w < q.length; w++) {
-      q[w].style.color = "#ffffff"; 
-    }
-  }
-  cn++;
-}</script></body></html>
+</html>
