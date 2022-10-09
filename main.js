@@ -52,10 +52,10 @@ function colored() {
 
   }
   else {
-    bod.style.background = "#ffffff";
+    bod.style.background = "#E5F4E3";
     d.innerHTML = d.innerHTML.replace("Light", "Dark");
     for (var w = 0; w < q.length; w++) {
-      q[w].style.color = "#ffffff";
+      q[w].style.color = "#E5F4E3";
     }
   }
   cn++;
