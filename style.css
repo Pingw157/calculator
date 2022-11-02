@@ -93,13 +93,13 @@ p {
   cursor: pointer;
 }
 
-@media screen and (min-width: 401px) {
+@media (min-width: 401px) {
   #center {
     width: 400px;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
   #center{
     width: 100%;
   }
