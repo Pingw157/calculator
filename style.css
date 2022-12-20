@@ -75,6 +75,7 @@ p {
   z-index: 0;
   position: absolute;
   top: 22%;
+  width: 100%;
 }
 
 .row-last {
@@ -93,14 +94,8 @@ p {
   cursor: pointer;
 }
 
-@media (min-width: 401px) {
+@media (min-width: 400px) {
   #center {
     width: 400px;
-  }
-}
-
-@media (max-width: 400px) {
-  #center{
-    width: 100%;
   }
 }
