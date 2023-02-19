@@ -8,8 +8,11 @@ body {
   background: #E5F4E3;
   margin: 0;
   padding: 0;
-  height: 90%;
   font-family: sans-serif;
+}
+
+.main {
+  height: 90%
 }
 
 .but {
